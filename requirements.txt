@@ -1,0 +1,15 @@
+# Python deps for the ProgramBench time-slot-auction experiment.
+# Install everything (venv + pi + Docker check) with:  bash setup_env.sh
+# Or just the Python packages into an active env:       pip install -r requirements.txt
+litellm>=1.40           # routes the NEGOTIATOR persona to any provider (OpenRouter/Azure/etc.)
+pyyaml>=6.0             # prompt YAMLs
+datasets>=2.19          # loads the ProgramBench task set from Hugging Face
+mcp>=1.0                # Model Context Protocol server (the three solver tools)
+uvicorn>=0.29           # transport for the per-worker MCP server
+requests>=2.31
+psutil>=5.9             # per-worker CPU/memory stats shown in the live monitor
+programbench>=1.2.4     # loads the task set (utils.load_data) and scores submissions (eval.eval)
+mini-swe-agent>=2.4.1   # ProgramBench benchmark config + the Docker environment the solver runs in
+# --- NOT pip-installable; installed by setup_env.sh / see README "Prerequisites" ---
+#   * pi     : the agentic-coding CLI that drives the solver  (npm i -g @earendil-works/pi-coding-agent)
+#   * Docker : rootless Docker daemon / Docker Desktop         (each task runs in an isolated container)

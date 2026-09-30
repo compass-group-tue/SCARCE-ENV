@@ -1,0 +1,36 @@
+[project]
+name = "programbench-auction"
+version = "0.1.0"
+description = "A testbed for strategic/collusive behavior among competing LLM agents negotiating for shared execution slots via a time-slot auction (ProgramBench, pi harness)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "litellm>=1.40",   # routes the negotiator persona to any provider
+    "pyyaml>=6.0",     # prompt YAMLs
+    "datasets>=2.19",  # loads the ProgramBench task set
+    "mcp>=1.0",        # per-worker MCP server (the three solver tools)
+    "uvicorn>=0.29",   # MCP server transport
+    "requests>=2.31",
+    "psutil>=5.9",           # per-worker stats in the live monitor
+    "programbench>=1.2.4",   # loads the task set + scores submissions
+    "mini-swe-agent>=2.4.1", # ProgramBench benchmark config + Docker environment
+]
+
+# NOT pip-installable (installed by setup_env.sh; see README "Prerequisites"):
+#   pi  -> npm i -g @earendil-works/pi-coding-agent   (agentic-coding CLI that drives the solver)
+#   Docker -> Docker Desktop / rootless Docker daemon (each task runs in an isolated container)
+
+[tool.setuptools]
+py-modules = [
+    "run_experiment",
+    "run_programbench_auction_subrun_harness_agents",
+    "run_programbench_auction_subrun_repo_agents",
+    "run_programbench_subrun_repo_agents",
+    "run_swebench_agentic_true_repo_agents",
+    "run_swebench_subrun_repo_agents",
+    "run_swebench_three_agents",
+    "programbench_auction_mcp_server",
+    "queue_negotiation",
+    "docker_task_scheduler",
+    "agent_harness_adapters",
+]

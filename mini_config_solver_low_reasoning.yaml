@@ -1,0 +1,5 @@
+model:
+  model_kwargs:
+    reasoning:
+      effort: low
+      enabled: true
