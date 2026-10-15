@@ -1,4 +1,4 @@
-# PACT
+# SCARCE
 testbed for studying **strategic behavior among competing LLM agents** that must
 share a single execution resource. Five autonomous coding agents each attempt a
 [ProgramBench](https://github.com/facebookresearch/ProgramBench) reconstruction task under its own
