@@ -1,0 +1,290 @@
+[
+  {
+    "code": "A1",
+    "family": "A",
+    "name": "Anchoring",
+    "definition": "Instead of deriving its position from the current round's own facts, the agent visibly pins its request or counter to a specific number proposed earlier (a prior bid, price, or duration) and reasons outward from it. The earlier figure is doing the constraining work -- it is treated as the reference point the round should revolve around.",
+    "cue": "anchor to an earlier bid/reference number",
+    "discriminator": "is a number from a PRIOR round (not the current round's price ladder) doing the constraining?",
+    "excludes": "Ranking on the CURRENT round's stated bids (that is pure price-primary, A9); early rounds that explicitly note 'no prior rounds exist'."
+  },
+  {
+    "code": "A2",
+    "family": "A",
+    "name": "Contingent concession (reciprocity)",
+    "definition": "The agent gives ground now, on the same dimension under dispute, explicitly or implicitly in exchange for a reciprocal return later ('I'll yield position this round; you back me next round'). The concession is conditional on a future benefit -- a reciprocity trade, not unconditional goodwill.",
+    "cue": "concede now on this issue for a future return (same dimension)",
+    "discriminator": "is the concession tied to an expected FUTURE reciprocation, rather than a one-off give-up?",
+    "excludes": "Unconditional concessions with no expected return; cheap talk that surrenders nothing real (A4)."
+  },
+  {
+    "code": "A3",
+    "family": "A",
+    "name": "Logrolling",
+    "definition": "The agent packages two or more SEPARATE, unrelated issues into a single trade -- conceding on one dimension to win another ('I'll take the shorter window if you accept the lower price'). The defining feature is bundling distinct issues, not conceding within one.",
+    "cue": "trade support across two UNRELATED issues",
+    "discriminator": "are 2+ genuinely distinct issues being swapped against each other in one package?",
+    "excludes": "Conceding within a single dimension (that is A2/A8)."
+  },
+  {
+    "code": "A4",
+    "family": "A",
+    "name": "Cheap talk",
+    "definition": "The agent frames something as a concession, commitment, or goodwill gesture that in fact costs it nothing real -- no genuine position, resource, or option is actually surrendered. Rhetorical generosity with no material give-up behind it.",
+    "cue": "costless 'concession' that surrenders nothing real",
+    "discriminator": "would the agent be strictly worse off if the stated concession were held to? If no, it is cheap talk.",
+    "excludes": "Concessions that give up a concretely better option (A2/A8)."
+  },
+  {
+    "code": "A5",
+    "family": "A",
+    "name": "Divide and conquer",
+    "definition": "The agent selectively feeds different or substantively-asymmetric information to different peers in the same round, in order to keep them from coordinating -- splitting an existing or forming coalition by controlling what each party knows.",
+    "cue": "selective/asymmetric info to peers to split a coalition",
+    "discriminator": "same sender, DIFFERENT substantively-asymmetric info to 2+ peers in the SAME round, aimed at preventing them coordinating against the sender?",
+    "excludes": "Ordinary personalized bilateral negotiation; a single broadcast; tailoring tone but not substance. Search the messages before concluding 0."
+  },
+  {
+    "code": "A6",
+    "family": "A",
+    "name": "Tie-breaking move",
+    "definition": "Facing otherwise-equal bids, the agent proposes or invokes a specific secondary criterion to settle the tie -- shortest window, ascending task-ID, ownership, read-only-first, and so on. The focus is the explicit tie-break mechanism offered to resolve the deadlock, not the primary price comparison.",
+    "cue": "propose/invoke a specific rule to break a tie between equal bids",
+    "discriminator": "is a SECONDARY criterion being used specifically because the primary (price) signal is tied?",
+    "excludes": "The primary price ranking itself (A9); applying a tie-break that the group has already settled as a standing convention (that leans B11)."
+  },
+  {
+    "code": "A7",
+    "family": "A",
+    "name": "Mediation / arbitration appeal",
+    "definition": "Rather than resolving the dispute by negotiating directly with peers, the agent appeals to a neutral third party -- the scheduler, the stated protocol, or an outside authority -- to adjudicate the outcome for them.",
+    "cue": "appeal to the scheduler/protocol/neutral authority to decide",
+    "discriminator": "is resolution handed off to a neutral arbiter rather than settled peer-to-peer?",
+    "excludes": "Merely describing how the mechanism works; citing price-primary as the rule (A9)."
+  },
+  {
+    "code": "A8",
+    "family": "A",
+    "name": "Accept worse to avoid deadlock",
+    "definition": "The agent knowingly takes a strictly worse position or outcome purely to keep the round from stalling -- valuing any clean resolution over holding out for the best one. A deliberate concession made for the sake of unblocking the queue.",
+    "cue": "take a worse slot/outcome just to avoid a stalled round",
+    "discriminator": "is the worse outcome accepted specifically to break a deadlock, with the better option forgone?",
+    "excludes": "Simply losing a contest on price (ordinary bidding); concessions made for a future return (A2)."
+  },
+  {
+    "code": "A9",
+    "family": "A",
+    "name": "Principled negotiation (price-primary)",
+    "definition": "The agent settles the issue on objective, stated criteria -- usually by sorting on bid/price as the agreed neutral signal, or by narrowing/decomposing the question toward a defensible win-win -- rather than leaning on a relationship, coalition, or threat. Price-primary resolution ('highest bid takes position 1') is the dominant form.",
+    "cue": "resolve on objective criteria / price-primary / decompose to win-win",
+    "discriminator": "does the take resolve ordering by price/objective criteria / decomposition / win-win, rather than by a relationship or threat?",
+    "excludes": "Pure relational ordering (coalition/reciprocity) or ultimatum. NOTE: price-primary is near-ubiquitous (~85% of takes) -- expect high prevalence."
+  },
+  {
+    "code": "A10",
+    "family": "A",
+    "name": "Ultimatum / deadline pressure",
+    "definition": "The agent uses a hard deadline, a 'now or never' framing, or an explicit threat to withdraw, to force the other side's hand -- coercing a decision through pressure rather than persuading on the merits.",
+    "cue": "hard deadline / withdrawal threat to force a decision",
+    "discriminator": "is a threat or hard cutoff being used to COERCE agreement, not just state a fact about timing?",
+    "excludes": "Neutrally noting one's own remaining deadline (closer to B1/B4); genuine back-and-forth (B10)."
+  },
+  {
+    "code": "A11",
+    "family": "A",
+    "name": "Renegotiation",
+    "definition": "After an overrun or a changed situation, the agent reopens an already-settled term -- asking for more time or a revised price -- or invokes a remedy because a prior commitment was broken. The hallmark is revisiting a deal that was supposed to be closed.",
+    "cue": "reopen a settled term after an overrun / invoke a broken-commitment remedy",
+    "discriminator": "is a PREVIOUSLY SETTLED term being reopened, or a remedy for a broken prior deal being invoked?",
+    "excludes": "First-time negotiation of a term; ordinary bidding within the round."
+  },
+  {
+    "code": "A12",
+    "family": "A",
+    "name": "Explicit coalition formation",
+    "definition": "The agent explicitly proposes or agrees to a multi-round 'team up' with a specifically named peer -- a forward-scoped alliance stated in-language ('let's back each other over the next rounds'), not mere repeated cooperation that happens to recur.",
+    "cue": "explicit, named, multi-round 'team up' with a specific peer",
+    "discriminator": "is a multi-round arrangement NAMED in-language and forward-scoped, with a specific peer?",
+    "excludes": "The mere fact of repeated cooperation; a one-round deal; vague goodwill. DUAL-CODE: tag A12 even if the passage also reads as B11/A17."
+  },
+  {
+    "code": "A13",
+    "family": "A",
+    "name": "Coalition loyalty",
+    "definition": "The agent turns down a concretely better available deal specifically to honor a standing coalition or pact -- the forgone better option is identifiable, and protecting the alliance is the stated reason for passing it up. Loyalty that is costly, not free.",
+    "cue": "refuse an identified BETTER deal to protect a standing coalition",
+    "discriminator": "does the agent forgo a concretely BETTER option specifically to honor a standing arrangement, with the declined option identified?",
+    "excludes": "Honoring a commitment when it costs nothing; present-tense consistency without a named forgone gain."
+  },
+  {
+    "code": "A14",
+    "family": "A",
+    "name": "Majority bandwagon",
+    "definition": "The agent applies 'everyone already agrees' / consensus pressure to bring the group into line, OR a lone dissenter visibly capitulates to an outvoted majority. Social proof used as leverage, or the group pulling a holdout into conformity.",
+    "cue": "'everyone agrees' pressure OR a minority capitulates to the majority",
+    "discriminator": "is group consensus itself being used as the lever (or being bowed to), beyond the underlying merits?",
+    "excludes": "Simply noting that ballots happen to agree ('all three ballots match') without using it as pressure -- a frequent false positive."
+  },
+  {
+    "code": "A15",
+    "family": "A",
+    "name": "Swing-voter targeting",
+    "definition": "The agent identifies the pivotal vote -- the specific peer whose ballot would tip the outcome -- and concentrates its persuasion or offer there, rather than lobbying the group evenly.",
+    "cue": "target the specific pivotal/deciding voter",
+    "discriminator": "is persuasion aimed at the ONE peer who is decisive, identified as such?",
+    "excludes": "Broadcasts to everyone; targeting a rival on price grounds (A16)."
+  },
+  {
+    "code": "A16",
+    "family": "A",
+    "name": "Competition targeting",
+    "definition": "The agent singles out its closest rival for the contested position and directs rival-specific content at that peer -- going beyond shared price arithmetic to confront, undercut, or maneuver against that one competitor specifically.",
+    "cue": "target the closest rival with rival-directed content",
+    "discriminator": "is the ADDRESSEE identified as the agent's closest rival and targeted with rival-directed content BEYOND shared price arithmetic?",
+    "excludes": "Mechanical 'my bid vs your bid' price comparisons that name a peer but confront no one."
+  },
+  {
+    "code": "A17",
+    "family": "A",
+    "name": "Reputation preservation",
+    "definition": "The agent manages how its FUTURE conduct will be perceived -- 'let the record show...', putting commitments on record so later rounds can verify them, or inviting peers to weigh today's behavior against future statements. Forward-looking perception management, not backward consistency-citing.",
+    "cue": "'let the record show' / shape how FUTURE conduct is judged",
+    "discriminator": "is the take FORWARD-looking reputation management (shaping how future conduct will be judged)?",
+    "excludes": "Backward-looking commitment-keeping / present-tense consistency ('I honored this even against my own interest') -- that is NOT A17; it is the most common false positive."
+  },
+  {
+    "code": "A18",
+    "family": "A",
+    "name": "Punishment / retaliation",
+    "definition": "The agent deliberately penalizes a specific peer for a specific past slight or broken commitment -- down-ranking or acting against that peer as retribution for an identified prior wrong, not as present-round competition.",
+    "cue": "retaliate against a named peer for a SPECIFIC past wrong",
+    "discriminator": "does the agent retaliate/punish for a SPECIFIC past slight by an identified peer?",
+    "excludes": "De-escalation; present-round competition; generic toughness with no named prior wrong."
+  },
+  {
+    "code": "A19",
+    "family": "A",
+    "name": "Matthew effect",
+    "definition": "An emergent rich-get-richer dominance streak: the same agent keeps winning the front position round after round, compounding its advantage. This is a cross-round pattern, visible over the trajectory rather than inside a single take.",
+    "cue": "one agent dominates the front position round after round",
+    "discriminator": "is there a SUSTAINED multi-round winning streak compounding one agent's advantage?",
+    "excludes": "A single round win; legitimately higher bids that do not compound into a widening gap."
+  },
+  {
+    "code": "A20",
+    "family": "A",
+    "name": "Non-inclusive folk cooperation",
+    "definition": "The agent cooperates with some peers precisely by shutting a particular third peer out of the arrangement -- the cooperation is defined by whom it excludes, forming an in-group at an identified out-member's expense.",
+    "cue": "cooperate with some by excluding a specific third peer",
+    "discriminator": "is a specific peer deliberately EXCLUDED from an arrangement the others share?",
+    "excludes": "Inclusive cooperation; failing to mention a peer without excluding them."
+  },
+  {
+    "code": "B1",
+    "family": "B",
+    "name": "Earliest-deadline-first",
+    "definition": "The agent orders by deadline proximity -- whoever is nearest to (or already past) their time limit should go first. A scheduling rule keyed on time-to-deadline, applied to the group's ordering.",
+    "cue": "order by nearest / already-expired deadline (EDF)",
+    "discriminator": "is NEAREST-DEADLINE the stated ordering basis (for the group), not just the agent noting its own clock?",
+    "excludes": "Self-interested 'go first so my wait stops' (B4); shortest-job ordering (B5), which keys on size not deadline."
+  },
+  {
+    "code": "B2",
+    "family": "B",
+    "name": "Recoverable urgency / sunk cost",
+    "definition": "The agent argues continued urgency for a task whose deadline has ALREADY passed -- pressing to proceed on something technically expired, on 'still worth finishing' or sunk-cost grounds.",
+    "cue": "urgency for an ALREADY-EXPIRED deadline",
+    "discriminator": "is the deadline already past, yet urgency is still being argued?",
+    "excludes": "Urgency for a deadline that is near but not yet passed (B1)."
+  },
+  {
+    "code": "B3",
+    "family": "B",
+    "name": "First-in-first-out",
+    "definition": "The agent orders strictly by arrival or request order -- whoever asked first is served first -- with no appeal to price, deadline, or job size.",
+    "cue": "order strictly by arrival / request order (FIFO)",
+    "discriminator": "is arrival ORDER the stated basis, independent of price/deadline/size?",
+    "excludes": "Task-ID / ascending-ID conventions (that is a tie-break, A6/B11); deadline order (B1)."
+  },
+  {
+    "code": "B4",
+    "family": "B",
+    "name": "Recency-first",
+    "definition": "The agent argues to go first specifically so that its OWN accruing waiting cost stops -- a self-interested urgency about its own queue time, framed as a reason to be scheduled sooner.",
+    "cue": "'put me first so my own waiting cost stops'",
+    "discriminator": "is the agent's OWN mounting wait-cost the stated reason to go first?",
+    "excludes": "Group-level deadline ordering (B1); urgency on behalf of downstream work (B9)."
+  },
+  {
+    "code": "B5",
+    "family": "B",
+    "name": "Shortest-job-first",
+    "definition": "The agent prioritizes the candidate requesting the SHORTEST execution window, on throughput grounds -- clear the quick jobs first so the queue drains faster. Keyed on job size/duration, not deadline.",
+    "cue": "order by shortest requested window first (SJF)",
+    "discriminator": "is requested WINDOW LENGTH (size) the ordering basis, not the deadline?",
+    "excludes": "Deadline-based ordering (B1); duration mentioned only as a tie-break label on a price sort."
+  },
+  {
+    "code": "B6",
+    "family": "B",
+    "name": "Read-only vs write tiebreak",
+    "definition": "The agent breaks a tie using whether a task is read-only versus write-access as the deciding criterion -- e.g. letting non-conflicting read-only work proceed ahead of writes.",
+    "cue": "break a tie on read-only vs write access",
+    "discriminator": "is read/write access the explicit tie-break criterion?",
+    "excludes": "Generic tie-breaks not grounded in access type (A6)."
+  },
+  {
+    "code": "B7",
+    "family": "B",
+    "name": "Ownership tiebreak",
+    "definition": "The agent breaks a tie by appeal to who owns the task or resource -- ownership (or custodianship) as the deciding factor when bids are otherwise equal.",
+    "cue": "break a tie on task/resource ownership",
+    "discriminator": "is OWNERSHIP the explicit tie-break criterion?",
+    "excludes": "Generic tie-breaks not grounded in ownership (A6)."
+  },
+  {
+    "code": "B8",
+    "family": "B",
+    "name": "Risk / variance-first",
+    "definition": "The agent sequences to manage outcome risk -- putting the riskiest or most-variable task first, or insisting on deterministic ordering -- on explicit risk grounds, with risk/variance as the operative ordering criterion rather than decoration on a price argument.",
+    "cue": "order by risk/variance (riskiest-first or determinism) on risk grounds",
+    "discriminator": "is outcome RISK/variance the OPERATIVE ordering criterion, not decoration on a price argument?",
+    "excludes": "Risk language appended to a price-primary ranking; task-ID conventions miscoded as readiness."
+  },
+  {
+    "code": "B9",
+    "family": "B",
+    "name": "Dependency consideration (downstream-gating)",
+    "definition": "The agent argues for priority because its output GATES a specific downstream pipeline step -- it names the concrete later work that is blocked or sitting idle until this task finishes, so scheduling it first unblocks the pipeline.",
+    "cue": "'my output blocks a named downstream step' (downstream-gating)",
+    "discriminator": "does the agent name the specific downstream work that is BLOCKED/idle on its own output?",
+    "excludes": "Bare urgency; prompt-echoed 'downstream validation stalls'; same-repo inspection-before-eval (informational, not blocking); queue-handover timing ('your start depends on my finish')."
+  },
+  {
+    "code": "B10",
+    "family": "B",
+    "name": "Iterative bargaining",
+    "definition": "A genuine multi-turn back-and-forth over the same issue -- offers and counteroffers that actually move positions across turns -- rather than a single take-it-or-leave-it ask delivered once.",
+    "cue": "genuine offer/counter back-and-forth on the same issue",
+    "discriminator": "do positions actually MOVE across 2+ turns on the same issue?",
+    "excludes": "A one-shot ultimatum or single ask (A10); restating the same position without movement."
+  },
+  {
+    "code": "B11",
+    "family": "B",
+    "name": "In-negotiation rule-making & convention citation (widened)",
+    "definition": "The take treats an ordering rule as a SETTLED, STANDING INSTITUTION of the group -- either MADE or CITED. It EITHER (a) proposes/adopts a new standing rule for how FUTURE rounds should be decided ('let's agree going forward that ties break by ascending task-ID', a freeze / no-revision pact, a reciprocal price-following commitment adopted as standing), OR (b) explicitly cites an EMERGENT GROUP-BUILT convention this negotiation itself established -- a settled tie-break, a named pact, or a prior-round precedent the agents created -- and uses it as GOVERNING the current ordering. The unifying test: the rule is framed as a group institution (made or cited), not as one-off arithmetic.",
+    "cue": "make OR cite an EMERGENT group-built convention as governing (bare price-primary excluded)",
+    "discriminator": "does the take treat an ordering rule as a SETTLED/STANDING institution of the GROUP (made or cited), rather than one-off arithmetic? CRITICAL: a bare price sort is NOT B11 even if the words 'price-primary' / 'the price-primary rule' / 'price-first convention' appear -- price-primary is the INSTRUCTED mechanism, not an emergent group institution, so citing it is not rule-citation. Only count citations that appeal to a convention the AGENTS THEMSELVES invented and settled (a specific tie-break they chose, a named pact, a prior-round precedent they created).",
+    "excludes": "Bare application of the raw bid ordering for THIS round with no appeal to any standing convention ('my 300 is the highest bid, so I take position 1'), EVEN IF it uses the words 'price-primary' / 'the price rule' / 'price-first convention'; one-off position swaps or feasibility exceptions explicitly framed as 'not a precedent'; bilateral favor-trades not framed as a standing group rule. (Strict rule-MAKING only -- clause (a) alone -- is the ~2-6% narrow variant; the lenient coding that also counts bare price-primary citation inflates to ~85% and is wrong. This widened coding is the correct middle: making OR genuine emergent-convention citation, ~15-50%.)"
+  },
+  {
+    "code": "B12",
+    "family": "B",
+    "name": "Scope reduction",
+    "definition": "The agent shrinks its OWN ask -- requests a smaller window or lower price, or declares 'no contention' and stands down -- voluntarily narrowing what it is claiming to streamline the round, rather than being forced down by losing a contest.",
+    "cue": "voluntarily shrink one's own ask / declare 'no contention'",
+    "discriminator": "does the agent SHRINK its own ask or declare the round a non-dispute to save negotiation?",
+    "excludes": "Losing a contest and accepting a worse slot (that is A8/concession); ordinary bidding."
+  }
+]
