@@ -1,4 +1,14 @@
-# SCARCE
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
+    <img src="assets/logo-light.svg" alt="SCARCE logo" width="130">
+  </picture>
+</p>
+
+<h1 align="center">SCARCE</h1>
+
+<p align="center"><b>S</b>hared <b>C</b>ompute <b>AR</b>ena for <b>C</b>oding ag<b>E</b>nts</p>
+
 testbed for studying **strategic behavior among competing LLM agents** that must
 share a single execution resource. Five autonomous coding agents each attempt a
 [ProgramBench](https://github.com/facebookresearch/ProgramBench) reconstruction task under its own

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" fill="none">
+  <!-- contesting cursors -->
+  <g fill="#E9E4D8">
+    <path d="M130 26 L152 62 L108 62 Z"/>
+    <path d="M63 236 L40 196 L86 196 Z"/>
+    <path d="M193 236 L170 196 L216 196 Z"/>
+  </g>
+  <!-- the shared window -->
+  <rect x="60" y="70" width="140" height="140" rx="30" stroke="#EDA33D" stroke-width="18"/>
+  <rect x="97" y="107" width="66" height="66" rx="12" fill="#EDA33D"/>
+  <!-- claimed slot -->
+  <rect x="156" y="196" width="28" height="28" rx="6" fill="#2BAFA0"/>
+</svg>
